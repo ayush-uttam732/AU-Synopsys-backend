@@ -11,6 +11,11 @@ app.use(cors());
 app.use(express.json());
 
 // 🔥 route connect
+
+app.get("/", (req, res) => {
+  res.send("🚀 Backend is live");
+});
+
 app.use("/api", generateRoute);
 
 app.listen(5000, () => {
